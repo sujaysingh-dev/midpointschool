@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
     const [fullName, setFullName] = useState("");
@@ -25,6 +25,7 @@ export default function Register() {
         // Here you can add API call logic
         console.log({ fullName, emailId, password, confirmPassword });
         toast.success("Registration successful! Welcome aboard.");
+        useNavigate("/login");
 
         // Reset form
         setFullName("");
@@ -64,3 +65,4 @@ export default function Register() {
         </div>
     );
 }
+
