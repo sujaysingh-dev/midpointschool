@@ -31,7 +31,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Menu */}
-            <div className={`lg:hidden fixed top-[8vh] right-0 w-50 h-screen bg-slate-50 shadow-lg p-6 flex flex-col gap-6 text-lg transform transition-all duration-500 ${open ? "translate-x-0" : "translate-x-full"}`}>
+            <div className={`lg:hidden fixed top-[8vh] right-0 w-50 h-screen bg-slate-50 shadow-lg p-6 flex flex-col gap-6 text-lg transform transition-all duration-500 z-100 ${open ? "translate-x-0" : "translate-x-full"}`}>
                 <a onClick={() => setOpen(false)} href="/">Home</a>
                 <a onClick={() => setOpen(false)} href="#about">About us</a>
                 <a onClick={() => setOpen(false)} href="#academics">Academics</a>
@@ -46,3 +46,4 @@ export default function Header() {
         </div>
     );
 }
+
